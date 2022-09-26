@@ -1,8 +1,8 @@
 version 1.0
 
-import "tasks/common.wdl" as common
-import "tasks/hisat2.wdl" as hisat2Task
-import "tasks/samtools.wdl" as samtools
+import "https://raw.githubusercontent.com/biowdl/tasks/e2559dbc5cb36a8b6031a4fd03e48882fb7471d4/common.wdl" as common
+import "https://raw.githubusercontent.com/biowdl/tasks/e2559dbc5cb36a8b6031a4fd03e48882fb7471d4/hisat2.wdl" as hisat2Task
+import "https://raw.githubusercontent.com/biowdl/tasks/e2559dbc5cb36a8b6031a4fd03e48882fb7471d4/samtools.wdl" as samtools
 
 workflow AlignHisat2 {
     input {
