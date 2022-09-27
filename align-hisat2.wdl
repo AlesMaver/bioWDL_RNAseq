@@ -31,7 +31,7 @@ workflow AlignHisat2 {
                 indexFiles = indexFiles,
                 inputR1 = reads.R1,
                 inputR2 = reads.R2,
-                outputBam = outputDir + "/" + sample + "-" + library + "-" + readgroup + ".bam",
+                outputBam = outputDir + "/" + sample + ".marked.bam",
                 sample = sample,
                 library = library,
                 readgroup = readgroup,
@@ -43,7 +43,7 @@ workflow AlignHisat2 {
     call samtools.Merge as samtoolsMerge {
         input:
             bamFiles =  hisat2.bamFile,
-            outputBamPath = outputDir + "/" + sample + "-" + library + ".bam",
+            outputBamPath = outputDir + "/" + sample + ".marked.bam",
             dockerImage = dockerImages["samtools"]
     }
 
